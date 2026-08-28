@@ -15,7 +15,7 @@ function primaryImage(p){
 function productMedia(p){
   const img=primaryImage(p);
   if(!img) return `<span class="product-fallback">${p.emoji || '•'}</span>`;
-  return `<img src="${img}" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:18px;display:block" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<span class=\'product-fallback\'>${p.emoji || '•'}</span>')">`;
+  return `<img src="${img}" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:18px;display:block" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='grid'"><span class="product-fallback" style="display:none">${p.emoji || '•'}</span>`;
 }
 
 function card(p){
@@ -55,7 +55,7 @@ function render(){
 document.addEventListener('DOMContentLoaded',()=>{
   const style=document.createElement('style');
   style.textContent=`
-    .product-fallback{width:118px;height:118px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-size:54px;border:2px solid #111}
+    .product-fallback{width:118px;height:118px;border-radius:50%;background:var(--yellow);place-items:center;font-size:54px;border:2px solid #111}
     .season-label{font-size:10px;font-weight:950;letter-spacing:.12em;margin-bottom:8px;color:#8a7210}
     .unavailable-card{opacity:.72}.unavailable-card .product-media img{filter:grayscale(.65)}
     .badge-unavailable{background:#111;color:#fff}.unavailable-btn{background:#d7d6d0!important;color:#6d6d67!important;cursor:not-allowed!important}
