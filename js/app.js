@@ -8,15 +8,24 @@ const cats = {
 };
 let active='all';
 
+function primaryImage(p){
+  return (p.images && p.images.length ? p.images[0] : p.image) || null;
+}
+
 function productMedia(p){
-  if(!p.image) return `<span class="product-fallback">${p.emoji || '•'}</span>`;
-  return `<img src="${p.image}" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:18px;display:block" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<span class=\'product-fallback\'>${p.emoji || '•'}</span>')">`;
+  const img=primaryImage(p);
+  if(!img) return `<span class="product-fallback">${p.emoji || '•'}</span>`;
+  return `<img src="${img}" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:contain;padding:18px;display:block" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<span class=\'product-fallback\'>${p.emoji || '•'}</span>')">`;
 }
 
 function card(p){
-  return `<article class="card${p.hero ? ' hero-card' : ''}">
+  const unavailable=p.available===false;
+  const cartButton=unavailable
+    ? `<button class="btn-card unavailable-btn" disabled>Очікуємо</button>`
+    : `<button class="btn-card" onclick="Store.add('${p.id}')">У кошик</button>`;
+  return `<article class="card${p.hero ? ' hero-card' : ''}${unavailable ? ' unavailable-card' : ''}">
     <a href="product.html?id=${p.id}" class="product-media">
-      <span class="badge">${p.badge}</span>${productMedia(p)}
+      <span class="badge${unavailable ? ' badge-unavailable' : ''}">${unavailable ? 'Немає в наявності' : p.badge}</span>${productMedia(p)}
     </a>
     <div class="card-body">
       ${p.hero ? '<div class="season-label">AUTUMN / HERO</div>' : ''}
@@ -24,7 +33,7 @@ function card(p){
       <div class="card-short">${p.short}</div>
       <div class="price-row"><span class="price">${Store.money(p.price)}</span></div>
       <div class="card-actions">
-        <button class="btn-card" onclick="Store.add('${p.id}')">У кошик</button>
+        ${cartButton}
         <button class="btn-eye" aria-label="Відкрити товар" onclick="location.href='product.html?id=${p.id}'">→</button>
       </div>
     </div>
@@ -48,6 +57,8 @@ document.addEventListener('DOMContentLoaded',()=>{
   style.textContent=`
     .product-fallback{width:118px;height:118px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-size:54px;border:2px solid #111}
     .season-label{font-size:10px;font-weight:950;letter-spacing:.12em;margin-bottom:8px;color:#8a7210}
+    .unavailable-card{opacity:.72}.unavailable-card .product-media img{filter:grayscale(.65)}
+    .badge-unavailable{background:#111;color:#fff}.unavailable-btn{background:#d7d6d0!important;color:#6d6d67!important;cursor:not-allowed!important}
     @media(min-width:921px){
       #products.grid{grid-template-columns:repeat(12,1fr)}
       #products .card{grid-column:span 3}
