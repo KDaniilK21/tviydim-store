@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kdaniilk21.github.io/tviydim-store/sitemap.xml
