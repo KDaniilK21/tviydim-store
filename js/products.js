@@ -9,7 +9,12 @@ window.PRODUCTS = [
     badge:'Осінній хіт',
     hero:true,
     emoji:'🧶',
-    image:null,
+    image:'https://content1.rozetka.com.ua/goods/images/big/384138939.jpg',
+    images:[
+      'https://content1.rozetka.com.ua/goods/images/big/384138939.jpg',
+      'https://images.prom.ua/3067984249_w1280_h640_3067984249.jpg',
+      'https://tuzzut.com/cdn/shop/files/6-175_600x.jpg?v=1739938102'
+    ],
     description:'Провідна машинка для видалення катишків, ворсу та пуху з одягу, пледів і домашнього текстилю.',
     features:['Потужність 4 Вт','Живлення 220 В','Знімний контейнер для катишків'],
     source:'https://www.websklad.biz.ua/?product=mashinka-ot-katyshkov-yx-5880'
@@ -24,7 +29,12 @@ window.PRODUCTS = [
     badge:'Дощі',
     hero:true,
     emoji:'👟',
-    image:null,
+    image:'https://unishop.md/content/images/36/536x536l50nn0/uscator-electric-de-ncalaminte-lsf-006-34110643513551.jpg',
+    images:[
+      'https://unishop.md/content/images/36/536x536l50nn0/uscator-electric-de-ncalaminte-lsf-006-34110643513551.jpg',
+      'https://d39ru7awumhhs2.cloudfront.net/colombia/products/1041528/1722711499WhatsApp%20Image%202024-08-03%20at%201.56.24%20PM.jpeg',
+      'https://cdn.buzistore.com/2024/09/Tharese-Elektrike-per-Kepucet.jpg'
+    ],
     description:'Компактна електросушарка для взуття з таймером — актуальна для дощової осені та холодного сезону.',
     features:['Таймер роботи','Для повсякденного взуття','Компактний формат'],
     source:'https://www.websklad.biz.ua/?product=antibakterialnaya-sushilka-dlya-obuvi-shoe-dryer-lsf-006-ultrafioletovaya-elektrosushilka-s-tajmerom'
@@ -39,10 +49,17 @@ window.PRODUCTS = [
     badge:'Затишок',
     hero:true,
     emoji:'🧥',
-    image:null,
+    image:'https://www.websklad.biz.ua/wp-content/uploads/rgeaserwfasd-600x600.jpg',
+    images:[
+      'https://www.websklad.biz.ua/wp-content/uploads/rgeaserwfasd-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/bgreafsdvsgewfdsads-1-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/fsdvserwafsda-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/grwasdfderqwafsd-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/gefdvsfeasfdsa.jpg'
+    ],
     description:'Велика флісова толстовка-плед з капюшоном і рукавами для дому, відпочинку та подарунка.',
     features:['Універсальний оверсайз','Флісовий матеріал','Довжина близько 110 см'],
-    source:'https://www.websklad.biz.ua/?product=pled-tolstovka-s-kapjushonom-i-rukavami-huggle-hoodie-oversajz-cvet-sinij'
+    source:'https://www.websklad.biz.ua/?product=pled-tolstovka-s-kapjushonom-i-rukavami-huggle-hoodie-oversajz-cvet-chernyj'
   },
   {
     id:'freshpack',
@@ -55,6 +72,13 @@ window.PRODUCTS = [
     hero:false,
     emoji:'🥩',
     image:'https://www.websklad.biz.ua/wp-content/uploads/ufvikcfiv-600x600.jpg',
+    images:[
+      'https://www.websklad.biz.ua/wp-content/uploads/ufvikcfiv-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/ufivv3kcjfiva-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/2020/11/180469920_images_16666797708-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/2020/11/116047999_images_13689208375-600x479.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/2020/11/180469920_images_16666796483-600x600.jpg'
+    ],
     description:'Компактний побутовий вакуумний пакувальник для продуктів, домашніх заготовок та організації морозильної камери.',
     features:['Потужність 90 Вт','Пакети шириною до 295 мм','5 пакетів у комплекті'],
     source:'https://www.websklad.biz.ua/?product=vakuumator-freshpack-pro-vakuumnyj-upakovshhik-edy-bytovoj-cvet-oranzhevyj'
@@ -68,8 +92,16 @@ window.PRODUCTS = [
     tags:['autumn','kitchen'],
     badge:'Кухня',
     hero:false,
+    available:false,
     emoji:'🥗',
     image:'https://www.websklad.biz.ua/wp-content/uploads/2020/10/101108557_images_12892882422-600x600.jpg',
+    images:[
+      'https://www.websklad.biz.ua/wp-content/uploads/2020/10/101108557_images_12892882422-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/2020/10/101108557_images_12892882062-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/2020/10/101108557_images_12892883052-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/2020/10/101108557_images_12892883832-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/2020/10/IMG_4386-600x600.jpg'
+    ],
     description:'Багатофункціональна овочерізка з контейнером для швидкої підготовки овочів, фруктів та інших продуктів.',
     features:['14 предметів у комплекті','Кілька способів нарізання','Контейнер із кришкою'],
     source:'https://www.websklad.biz.ua/?product=terka-nicer-dicer-plus'
@@ -85,6 +117,13 @@ window.PRODUCTS = [
     hero:false,
     emoji:'🪐',
     image:'https://www.websklad.biz.ua/wp-content/uploads/kcyavyakucafvy.jpg',
+    images:[
+      'https://www.websklad.biz.ua/wp-content/uploads/kcyavyakucafvy.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/kjcaypukaffvy.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/kcfayvacvay.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/cfyvafkayfvyv.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/ucfyvyakucfafyv.jpg'
+    ],
     description:'Компактний USB-зволожувач з проекційним нічником для робочого столу, спальні або дитячої кімнати.',
     features:['Резервуар 250 мл','3 режими підсвічування','Живлення від USB'],
     source:'https://www.websklad.biz.ua/?product=uvlazhnitel-vozduha-proektor-zvezdnoe-nebo-saturn-nastolnyj-svetilnik-nochnik-proekcionnyj'
@@ -100,6 +139,7 @@ window.PRODUCTS = [
     hero:false,
     emoji:'👕',
     image:null,
+    images:[],
     description:'Портативна підвісна сушарка для одягу з чохлом і таймером — компактно складається після використання.',
     features:['Потужність 600 Вт','Завантаження до 10 кг','Постійна температура сушіння близько 60°C'],
     source:'https://www.websklad.biz.ua/?product=sushilka-elektricheskaya-dlya-odezhdy-podvesnaya-skladnaya-s-pultom-tajmerom-i-chehlom'
@@ -115,9 +155,10 @@ window.PRODUCTS = [
     hero:false,
     emoji:'💡',
     image:null,
+    images:[],
     description:'Настільна RGB-лампа для атмосфери вдома з додатковими смарт-функціями.',
     features:['RGB-підсвічування','Bluetooth-аудіо','Бездротова зарядка сумісних пристроїв'],
-    source:'https://www.websklad.biz.ua/?p=157942'
+    source:'https://www.websklad.biz.ua/?product=nochnik-akkumulyatornyj-rgb-g3-s-besprovodnoj-zaryadkoj-15w-bluetooth-kolonka-nastolnaya-smart-lampa-black'
   },
   {
     id:'astronaut',
@@ -128,8 +169,16 @@ window.PRODUCTS = [
     tags:['autumn','cozy','gift'],
     badge:'WOW',
     hero:false,
+    available:false,
     emoji:'🌌',
     image:'https://www.websklad.biz.ua/wp-content/uploads/epufivpuivfpufipafipif-600x600.jpg',
+    images:[
+      'https://www.websklad.biz.ua/wp-content/uploads/epufivpuivfpufipafipif-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/rwfsfgtrewasfaersafd-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/rwasfdgrwefgsdg-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/rwasfdgerewfsasd-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/rwafsdsrgtrewfeasd-600x600.jpg'
+    ],
     description:'Проектор зоряного неба та галактик у корпусі космонавта з пультом дистанційного керування.',
     features:['8 видів проекції','Пульт керування','Регулювання голови на 360°'],
     source:'https://www.websklad.biz.ua/?product=nochnik-proektor-astronavt-zvezdnogo-neba-i-galaktiki-kosmonavt-8-rezhimov-s-pultom-du'
@@ -144,8 +193,15 @@ window.PRODUCTS = [
     badge:'Авто',
     hero:false,
     emoji:'🚗',
-    image:null,
-    description:'Компактна автомобільна дуйка 12 В, що працює від прикурювача та створює спрямований потік повітря.',
+    image:'https://www.websklad.biz.ua/wp-content/uploads/ervypkyvpyvfpky-600x600.jpg',
+    images:[
+      'https://www.websklad.biz.ua/wp-content/uploads/ervypkyvpyvfpky-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/revrirv-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/kurvypvypyvfpypy-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/eyvavpyfpy-600x600.jpg',
+      'https://www.websklad.biz.ua/wp-content/uploads/revayprvypvravy-600x600.jpg'
+    ],
+    description:'Компактна автомобільна дуйка 12 В від прикурювача для спрямованого потоку повітря. Це додаткове джерело тепла, а не заміна штатної пічки автомобіля.',
     features:['Живлення 12 В','Підключення до прикурювача','Спрямований потік повітря'],
     source:'https://www.websklad.biz.ua/?product=dujka-avtomobilnaya-car-fan-cf-702-portativnyj-avtomobilnyj-obogrevatel-salona-ot-prikurivatelya-avtodujka'
   }
