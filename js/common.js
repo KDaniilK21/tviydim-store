@@ -1,12 +1,21 @@
 window.Store = {
   getCart(){
-    try{return JSON.parse(localStorage.getItem('tviydim_cart')||'[]')}catch(e){return[]}
+    try{
+      const raw=JSON.parse(localStorage.getItem('tviydim_cart')||'[]');
+      if(!Array.isArray(raw)) return [];
+      if(!Array.isArray(window.PRODUCTS)) return raw;
+      const valid=new Set(window.PRODUCTS.map(p=>p.id));
+      const clean=raw.filter(x=>valid.has(x.id) && Number(x.qty)>0);
+      if(clean.length!==raw.length)localStorage.setItem('tviydim_cart',JSON.stringify(clean));
+      return clean;
+    }catch(e){return[]}
   },
   setCart(cart){
     localStorage.setItem('tviydim_cart',JSON.stringify(cart));
     this.updateCartCount();
   },
   add(id, qty=1){
+    if(!this.product(id))return;
     const cart=this.getCart();
     const item=cart.find(x=>x.id===id);
     if(item)item.qty+=qty; else cart.push({id,qty});
