@@ -7,8 +7,11 @@ function renderCart(){
   }
   const rows=cart.map(item=>{
     const p=Store.product(item.id); if(!p)return '';
+    const thumb=p.image
+      ? `<img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;padding:7px;display:block" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<span>${p.emoji || '•'}</span>')">`
+      : (p.emoji || '•');
     return `<div class="cart-item">
-      <div class="cart-thumb">${p.emoji}</div>
+      <div class="cart-thumb">${thumb}</div>
       <div><h3>${p.name}</h3><small>${Store.money(p.price)} × ${item.qty}</small>
         <div class="qty" style="margin-top:8px;width:max-content">
           <button onclick="changeQty('${p.id}',${item.qty-1})">−</button>
