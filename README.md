@@ -1,30 +1,46 @@
-# Твій Дім — Store v1
+# Твій Дім — корисні рішення
 
-Статичний mobile-first магазин для GitHub Pages / Cloudflare Pages.
+Mobile-first storefront для органічного трафіку з YouTube Shorts / Reels / TikTok. Стек: статичний HTML/CSS/JS + Cloudflare Pages Functions + D1.
 
-## Що вже працює
-- Головна сторінка
-- Категорії та фільтрація
-- 8 стартових товарів
-- Сторінка товару
-- Кошик через localStorage
-- Оформлення замовлення у DEMO-режимі
-- Збереження UTM-міток
-- Адаптивний дизайн
+## Готово
 
-## Важливо
-Checkout зараз НЕ надсилає замовлення в реальну систему. Він формує демо-замовлення локально у браузері.
-Наступний крок: Cloudflare Worker + endpoint `/api/order`, далі Telegram/Email або база D1.
+- адаптивна головна сторінка з evergreen-позиціонуванням;
+- топ-товари з коротких відео;
+- категорії, пошук і сортування;
+- окрема сторінка товару з галереєю, характеристиками, related products і мобільним CTA;
+- кошик у `localStorage` з кількістю та підрахунком суми;
+- UTM-збереження для атрибуції YouTube/соцмереж;
+- checkout без реєстрації;
+- валідація українського номера телефону;
+- реальний `POST /api/order` через Cloudflare Pages Function;
+- серверний перерахунок цін і кількості;
+- D1 schema для замовлень та позицій;
+- опційні Telegram-повідомлення;
+- honeypot + мінімальний anti-bot timing check;
+- branded favicon, базові SEO/OG metadata та Product JSON-LD.
 
-## Структура
-- index.html
-- product.html
-- cart.html
-- checkout.html
-- css/styles.css
-- js/products.js
-- js/common.js
-- js/app.js
-- js/product.js
-- js/cart.js
-- js/checkout.js
+## Ключові файли
+
+- `index.html` — головна і каталог
+- `product.html` — картка товару
+- `cart.html` — кошик
+- `checkout.html` — оформлення
+- `css/styles.css` — базовий дизайн
+- `css/final.css` — production polish
+- `js/products.js` — каталог і роздрібні ціни
+- `js/app.js` — фільтрація/пошук/сортування
+- `js/common.js` — кошик та UTM
+- `js/product.js` — галерея і карточка
+- `js/cart.js` — кошик
+- `js/checkout.js` — checkout client
+- `functions/api/order.js` — server-side прийом замовлення
+- `schema.sql` — D1 schema
+- `CLOUDFLARE_SETUP.md` — інструкція запуску
+
+## Важливо перед прийомом реальних замовлень
+
+Frontend уже не створює фальшиві demo-замовлення. Успіх показується лише після відповіді `/api/order`.
+
+Щоб endpoint реально приймав замовлення, потрібно підключити Cloudflare Pages і щонайменше один канал збереження: D1 (`DB`) або Telegram secrets. Рекомендовано використовувати D1 як основне сховище та Telegram як сповіщення.
+
+При зміні ціни синхронно оновлюйте її у `js/products.js` та `CATALOG` в `functions/api/order.js`.
