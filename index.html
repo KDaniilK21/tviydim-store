@@ -1,50 +1,74 @@
 <!doctype html>
 <html lang="uk"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Твій Дім — осінній каталог корисних рішень</title>
-<meta name="description" content="Осінній каталог практичних товарів для дому, кухні, одягу та авто. 10 рішень, які легко показати в дії.">
-<link rel="stylesheet" href="css/styles.css">
+<title>Твій Дім — корисні рішення для дому</title>
+<meta name="description" content="Практичні товари для дому, кухні, догляду та авто. Добірка речей, користь яких видно за кілька секунд.">
+<meta name="theme-color" content="#f2c400"><meta name="robots" content="index,follow">
+<meta property="og:title" content="Твій Дім — корисні рішення для дому"><meta property="og:description" content="Товари, користь яких видно в дії."><meta property="og:type" content="website"><meta property="og:locale" content="uk_UA">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/final.css">
 </head><body>
-
+<a class="skip-link" href="#catalog">До каталогу</a>
 <header class="header">
   <div class="container nav">
-    <a href="index.html" class="brand"><span class="brand-mark">⌂</span><span>Твій Дім</span></a>
-    <nav class="nav-links"><a href="index.html#catalog">Товари</a><a href="index.html#benefits">Чому ми</a><a href="index.html#contacts">Контакти</a></nav>
-    <div class="nav-actions"><a class="icon-btn" href="cart.html">Кошик <span class="cart-count" data-cart-count>0</span></a></div>
+    <a href="index.html" class="brand" aria-label="Твій Дім — головна"><span class="brand-mark" aria-hidden="true"></span><span>Твій Дім</span></a>
+    <nav class="nav-links" aria-label="Основна навігація"><a href="#catalog">Товари</a><a href="#how">Як замовити</a><a href="#delivery">Доставка</a><a href="#faq">FAQ</a></nav>
+    <div class="nav-actions"><a class="icon-btn" href="cart.html" aria-label="Відкрити кошик">Кошик <span class="cart-count" data-cart-count>0</span></a></div>
   </div>
 </header>
 
 <main>
 <section class="hero"><div class="container"><div class="hero-wrap">
 <div>
-  <div style="font-size:11px;font-weight:950;letter-spacing:.16em;margin-bottom:18px">AUTUMN 2026 / 10 РІШЕНЬ</div>
-  <h1>Осінь вдома — без зайвого клопоту</h1>
-  <p>Добірка речей для дощів, прохолодних вечорів, догляду за одягом, кухні та авто. Кожен товар має просту користь, яку легко побачити в дії.</p>
-  <div class="hero-actions"><a class="btn btn-primary" href="#catalog">Дивитися осінній каталог</a><a class="btn btn-outline" href="#benefits">Як ми відбираємо</a></div>
+  <div class="hero-kicker">ТОВАРИ З НАШИХ КОРОТКИХ ВІДЕО</div>
+  <h1>Корисні речі. Без зайвого.</h1>
+  <p>Ми відбираємо товари, цінність яких можна зрозуміти за кілька секунд: побачив проблему, побачив рішення, обрав потрібне.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="#catalog">Дивитися товари</a><a class="btn btn-outline" href="#how">Як замовити</a></div>
+  <div class="hero-proof"><span>✓ Без реєстрації</span><span>✓ Післяплата</span><span>✓ Доставка по Україні</span></div>
 </div>
-<div class="hero-art"><div class="bubble b1">🍂</div><div class="bubble b2">10</div><div class="bubble b3">+</div></div>
+<div class="hero-art" aria-hidden="true"><div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div></div>
+</div></div></section>
+
+<section class="trust-section"><div class="container"><div class="trust-strip">
+  <div class="trust-item"><strong>01</strong><span>Перевіряємо актуальну наявність перед відправкою</span></div>
+  <div class="trust-item"><strong>02</strong><span>Нова пошта по Україні за тарифами перевізника</span></div>
+  <div class="trust-item"><strong>03</strong><span>Оплата при отриманні на старті магазину</span></div>
 </div></div></section>
 
 <section class="section" id="catalog"><div class="container">
-<div class="section-head"><div><h2>Осінній каталог</h2><div class="section-sub">10 товарів на старт сезону. Перші три — наші пріоритетні позиції для коротких відео та тесту попиту.</div></div></div>
-<div class="filters" id="filters"></div><div class="grid" id="products"></div>
+<div class="section-head"><div><h2>Товари, які видно в дії</h2><div class="section-sub">Спочатку показуємо позиції з найсильнішим ефектом для Shorts, далі — весь каталог.</div></div><div class="catalog-stat"><span id="resultCount">0</span> товарів</div></div>
+<div class="catalog-toolbar"><label class="search-wrap"><span>Пошук</span><input id="productSearch" class="search-input" type="search" placeholder="Наприклад: кухня, магніт, сушарка" autocomplete="off"></label><label class="sort-wrap"><span>Сортування</span><select id="productSort" class="sort-select"><option value="recommended">Рекомендовані</option><option value="price-asc">Спочатку дешевші</option><option value="price-desc">Спочатку дорожчі</option><option value="name">За назвою</option></select></label></div>
+<div class="filters" id="filters" aria-label="Категорії"></div><div class="grid" id="products"></div>
 </div></section>
 
-<section class="section" id="benefits"><div class="container">
-<div class="section-head"><div><h2>Чому «Твій Дім»</h2><div class="section-sub">Не великий маркетплейс, а коротка добірка речей з конкретною побутовою користю.</div></div></div>
+<section class="section" id="how"><div class="container"><div class="section-head"><div><h2>Як замовити</h2><div class="section-sub">Три кроки без акаунтів, паролів і довгих форм.</div></div></div>
+<div class="steps">
+  <article class="step"><div class="step-number">01</div><h3>Оберіть товар</h3><p>Відкрийте картку, перегляньте фото, характеристики та додайте потрібну кількість у кошик.</p></article>
+  <article class="step"><div class="step-number">02</div><h3>Вкажіть доставку</h3><p>Залиште ім’я, телефон, місто та номер відділення або поштомату Нової пошти.</p></article>
+  <article class="step"><div class="step-number">03</div><h3>Отримайте підтвердження</h3><p>Ми перевіряємо наявність і передаємо замовлення на відправку. Оплата — при отриманні.</p></article>
+</div></div></section>
+
+<section class="section" id="delivery"><div class="container"><div class="section-head"><div><h2>Доставка й оплата</h2><div class="section-sub">Умови зроблені максимально простими для першого замовлення.</div></div></div>
+<div class="info-grid">
+  <article class="info-card"><div class="info-icon">→</div><h3>Нова пошта</h3><p>Відділення або поштомат по Україні. Вартість доставки розраховує перевізник за своїми тарифами.</p></article>
+  <article class="info-card"><div class="info-icon">₴</div><h3>Післяплата</h3><p>На старті магазину оплата відбувається при отриманні. Дані банківської картки на сайті не вводяться.</p></article>
+</div></div></section>
+
+<section class="section" id="benefits"><div class="container"><div class="section-head"><div><h2>Як ми відбираємо</h2><div class="section-sub">Менше випадкових позицій — більше товарів, які вирішують зрозумілу задачу.</div></div></div>
 <div class="benefits">
-<div class="benefit"><div style="font-size:28px">⚡</div><strong>Користь видно одразу</strong><span>Ми відбираємо товари, результат яких можна показати в короткому відео без довгих пояснень.</span></div>
-<div class="benefit"><div style="font-size:28px">🍂</div><strong>Каталог змінюється по сезону</strong><span>Восени — тепло, сушіння, догляд і затишок. Далі додамо зимові рішення та подарунки.</span></div>
-<div class="benefit"><div style="font-size:28px">📦</div><strong>Доставка по Україні</strong><span>Наявність підтверджується перед відправкою, доставка — за тарифами перевізника.</span></div>
+<div class="benefit"><div></div><strong>Користь видно одразу</strong><span>Товар має бути зрозумілим у короткому відео без довгої інструкції.</span></div>
+<div class="benefit"><div></div><strong>Проблема → рішення</strong><span>Пріоритет — речам із чітким ефектом до/після, економією часу або зручністю.</span></div>
+<div class="benefit"><div></div><strong>Каталог без перевантаження</strong><span>Ми не женемося за тисячами позицій: слабкі товари прибираємо, сильні залишаємо.</span></div>
+</div></div></section>
+
+<section class="section" id="faq"><div class="container"><div class="section-head"><div><h2>Питання та відповіді</h2></div></div><div class="faq">
+<details><summary>Як зрозуміти, що товар є в наявності?</summary><p>Перед відправкою ми перевіряємо актуальну наявність. Якщо позиція закінчилася, замовлення не відправляємо без узгодження.</p></details>
+<details><summary>Як я оплачую замовлення?</summary><p>На старті магазину — післяплата при отриманні. Сайт не просить вводити номер банківської картки.</p></details>
+<details><summary>Скільки коштує доставка?</summary><p>Доставка оплачується за актуальними тарифами перевізника. Остаточна сума залежить від посилки та обраного способу отримання.</p></details>
+<details><summary>Чому в каталозі небагато товарів?</summary><p>Це навмисно: ми тестуємо невеликий асортимент і залишаємо позиції, які показують зрозумілу користь та реально цікавлять покупців.</p></details>
 </div></div></section>
 </main>
 
-<footer class="footer" id="contacts">
-  <div class="container footer-row">
-    <div><strong>Твій Дім</strong><br>Корисні рішення, які видно в дії.</div>
-    <div>© 2026 Твій Дім · Україна</div>
-  </div>
-</footer>
-
+<footer class="footer"><div class="container footer-row"><div><strong>Твій Дім</strong><br>Корисні рішення, які видно в дії.</div><div>© 2026 Твій Дім · Україна</div></div></footer>
 <script src="js/products.js"></script><script src="js/common.js"></script><script src="js/app.js"></script>
 </body></html>
